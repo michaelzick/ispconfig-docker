@@ -41,7 +41,7 @@ setup() {
 }
 
 @test "ispconfig uses build hostname" {
-  docker exec "$CONTAINER" mysql -uroot -p"$MYSQL_PW" -e "SELECT * from dbispconfig.server" | grep "hostname=myhost.test.com"
+  docker exec "$CONTAINER" mysql -uroot -p"$MYSQL_PW" -e "SELECT * from dbispconfig.server" | grep "hostname=dev.mylocalenv.com"
 }
 
 @test "supplementary vhost is enabled" {

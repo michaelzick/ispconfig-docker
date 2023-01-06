@@ -91,7 +91,7 @@ volumes:
 
 | Argument                         | Default           | Comments |
 |----------------------------------|-------------------|----------|
-| `BUILD_HOSTNAME`                 | `myhost.test.com` | The hostname to use for the build, including ISPConfig
+| `BUILD_HOSTNAME`                 | `dev.mylocalenv.com` | The hostname to use for the build, including ISPConfig
 | `BUILD_ISPCONFIG_USE_SSL`        | `yes`             | Should ISPConfig use SSL? Note: this will be a self-signed certificate. See Reverse Proxy section
 | `BUILD_PHPMYADMIN`               | `yes`             | Include PHPMyAdmin
 | `BUILD_CERTBOT`                  | `yes`             | Include/exclude [Let's Encrypt](https://letsencrypt.org/)
@@ -154,8 +154,8 @@ It is possible to connect to a remote SQL server during the build. This would re
 | `APACHE_SUPPLEMENTARY_VHOSTS` | `/etc/apache2/supplementary/*.vhost` | Adds an `include` statement to the Apache config to add supplementary [vhosts](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
 | `APACHE_ENABLE_MODS` | `macro,proxy_balancer,proxy_http` | Apache standard modules to enable. Note this won't _install_ any non-standard mods
 | `MYSQL_HOST` | `host` | Reconfigure services to point to this SQL server
-| `HOSTNAME` | `myhost.test.com` | Runtime hostname
-| `HOSTNAME_EMAIL` | `mail.myhost.test.com` | Runtime hostname for email
+| `HOSTNAME` | `dev.mylocalenv.com` | Runtime hostname
+| `HOSTNAME_EMAIL` | `mail.dev.mylocalenv.com` | Runtime hostname for email
 | `DISABLED_SERVICES` | `unbound` | Space-separated list of installed services to disable at runtime. Complete list in the [Dockerfile](./Dockerfile)
 | `POSTGREY_DELAY` | `300` | [Postgrey delay time](https://wiki.centos.org/HowTos/postgrey)
 | `POSTGREY_MAX_AGE` | `35` | [Postgrey maximum age](https://wiki.centos.org/HowTos/postgrey)

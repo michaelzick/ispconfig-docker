@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
       args:
         BUILD_TZ: Europe/London
-        BUILD_HOSTNAME: myhost.test.com
+        BUILD_HOSTNAME: dev.mylocalenv.com
         BUILD_MYSQL_PW: pass
         BUILD_PRINTING: "no"
         BUILD_REDIS: "yes"

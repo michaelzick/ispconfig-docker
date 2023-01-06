@@ -15,8 +15,8 @@ services:
       - LANGUAGE=C
       - LANG=C.UTF-8
       - LC_ALL=C.UTF-8
-      - HOSTNAME=myhost.test.com            # see ./build/autoinstall.ini
-      - HOSTNAME_EMAIL=mail.myhost.test.com # Hostname for email
+      - HOSTNAME=dev.mylocalenv.com            # see ./build/autoinstall.ini
+      - HOSTNAME_EMAIL=mail.dev.mylocalenv.com # Hostname for email
       - DISABLED_SERVICES=rspamd unbound # disable services (apache2 clamav-daemon cron dovecot fail2ban mariadb postfix postfix pure-ftpd-mysql redis rspamd rsyslog spamassassin ssh unbound)
       # - REDIS_HOST=localhost
       # - POSTGREY_DELAY=300

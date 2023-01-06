@@ -11,8 +11,8 @@ services:
     networks:
       - test_shared
     environment:
-      - HOSTNAME=myhost.test.com
-      - HOSTNAME_EMAIL=mail.myhost.test.com
+      - HOSTNAME=dev.mylocalenv.com
+      - HOSTNAME_EMAIL=mail.dev.mylocalenv.com
       - SSL_CERT=/etc/ssl/local/test.com.crt
       - SSL_CHAIN=/etc/ssl/local/test.com.pem
       - SSL_KEY=/etc/ssl/local/test.com.key
@@ -32,7 +32,7 @@ services:
       - SSL_CERT=/etc/ssl/local/test.com.crt
       - SSL_CHAIN=/etc/ssl/local/test.com.pem
       - SSL_KEY=/etc/ssl/local/test.com.key
-      - HOSTNAME_EMAIL=mail.myhost.test.com
+      - HOSTNAME_EMAIL=mail.dev.mylocalenv.com
       - DISABLED_SERVICES=unbound rspamd
     volumes:
       - ./ssl:/etc/ssl/local:ro
