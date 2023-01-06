@@ -1,6 +1,6 @@
 # ispconfig-docker
 
-This is a fork of [Unimock](https://github.com/unimock)'s excellent work on implementing a containerized version of the [ISPConfig](https://www.ispconfig.org) web-hosting suite.
+This is a fork of [itsthejb](https://github.com/itsthejb/ispconfig-docker)'s excellent work on implementing a containerized version of the [ISPConfig](https://www.ispconfig.org) web-hosting suite.
 
 ## Caveats
 
