@@ -7,6 +7,9 @@ services:
       - type: volume
         source: eragondev_data
         target: /var/www
+      - type: volume
+        source: eragondev_db
+        target: /var/lib/mysql
     container_name: eragondev
     hostname: dev
     domainname: mylocalenv.com
@@ -38,3 +41,4 @@ services:
     ]
 volumes:
   eragondev_data:
+  eragondev_db:
