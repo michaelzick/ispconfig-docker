@@ -4,8 +4,8 @@ services:
   ispconfig:
     image: ispconfigdocker:php74
     volumes:
-      - eragondev_data:/var/www
-      - eragondev_db:/var/lib/mysql
+      - www_data:/var/www
+      - msql_data:/var/lib/mysql
     container_name: eragondev
     hostname: dev
     domainname: mylocalenv.com
@@ -36,7 +36,7 @@ services:
       "30000-30009:30000-30009", # pure-ftpd
     ]
 volumes:
-  eragondev_data:
+  www_data:
     driver: local
-  eragondev_db:
+  msql_data:
     driver: local
