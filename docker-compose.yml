@@ -4,12 +4,8 @@ services:
   ispconfig:
     image: ispconfigdocker:php74
     volumes:
-      - type: volume
-        source: eragondev_data
-        target: /var/www
-      - type: volume
-        source: eragondev_db
-        target: /var/lib/mysql
+      - eragondev_data:/var/www
+      - eragondev_db:/var/lib/mysql
     container_name: eragondev
     hostname: dev
     domainname: mylocalenv.com
@@ -41,4 +37,6 @@ services:
     ]
 volumes:
   eragondev_data:
+    driver: local
   eragondev_db:
+    driver: local
