@@ -2,11 +2,11 @@ version: '3.9'
 
 services:
   ispconfig:
-    image: ispconfigdocker:php74
+    image: ispconfig-php74
     volumes:
       - www_data:/var/www
       - msql_data:/var/lib/mysql
-    container_name: ispconfigdocker-php74
+    container_name: ispconfig-php74
     hostname: dev
     domainname: mylocalenv.com
     cap_add: [

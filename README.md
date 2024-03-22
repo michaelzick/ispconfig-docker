@@ -25,35 +25,9 @@ This is a fork of [itsthejb](https://github.com/itsthejb/ispconfig-docker)'s exc
 
 ## How to install (rough guide)
 
-* Fork this repository
-* Copy [the template compose file](https://github.com/itsthejb/ispconfig-docker/blob/master/docker-compose.build.yml) to the standard filename of `docker-compose.yml`
-* Customize the build options in your `docker-compose.yml`
-  * One strategy for doing this could be to use the compose file `extends` directive to customize just the options you require, eg. `docker-compose.build.yml`. You then have a separate file for just the customized build options, and your runtime configuration:
-
-```yaml
-version: '3.9'
-
-services:
-
-  ispconfig:
-    extends:
-      file: docker-compose.build.yml
-      service: ispconfig
-    build:
-      args:
-        BUILD_CERTBOT: "no"
-        BUILD_HOSTNAME: "ispconfig"
-        BUILD_ISPCONFIG_USE_SSL: "no"
-        ... etc
-```
-
-* Run the build
-  * `docker-compose build .`
-  * If using `extends`: `docker-compose -f docker-compose.build.yml build`
+* In your terminal run `docker build -t ispconfig-php74 .`. You can change this name if you like, however you'll need to change the image name in docker-compose.yml to match.
 * Start the container: `docker-compose up -d`
 * Initally test the build by connecting to the ispconfig control panel: `http://<localhost>:8080`
-* Do addition verification!
-* Ideally, push your image to Docker Cloud
 * Mount persistant volumes and judiciously copy configuration files from the container (see below)
 
 ## Persistent data
