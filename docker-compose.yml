@@ -6,7 +6,7 @@ services:
     volumes:
       - www_data:/var/www
       - msql_data:/var/lib/mysql
-    container_name: eragondev
+    container_name: ispconfig-docker-php74
     hostname: dev
     domainname: mylocalenv.com
     cap_add: [
