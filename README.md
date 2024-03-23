@@ -25,7 +25,7 @@ This is a fork of [itsthejb](https://github.com/itsthejb/ispconfig-docker)'s exc
 
 ## How to install (rough guide)
 
-* In your terminal run `docker build -t ispconfig-php74 .`. You can change this name if you like, however you'll need to change the image name in docker-compose.yml to match.
+* In your terminal run `docker build -t ispconfig:php74 .`. You can change this name if you like, however you'll need to change the image name in docker-compose.yml to match.
 * Start the container: `docker-compose up -d`
 * Initally test the build by connecting to the ispconfig control panel: `http://<localhost>:8080`
 * Mount persistant volumes and judiciously copy configuration files from the container (see below)
