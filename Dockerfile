@@ -64,7 +64,7 @@ ENV POSTGREY_MAX_AGE=35
 ENV POSTGREY_TEXT="Delayed by postgrey"
 
 # --- prep
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y install curl
 RUN curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg
 COPY ./build/etc/apt/sources.list /etc/apt/sources.list
