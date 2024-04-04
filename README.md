@@ -25,6 +25,7 @@ This is a fork of [itsthejb](https://github.com/itsthejb/ispconfig-docker)'s exc
 
 ## How to install (rough guide)
 
+* Clone the repo using SSH. If you're on Windows, run `git clone git@github.com:docker-library/wordpress.git --config core.autocrlf=input` to pull with compatible line breaks. See https://willi.am/blog/2016/08/11/docker-for-windows-dealing-with-windows-line-endings/.
 * In your terminal run `docker build -t ispconfigdocker:php74 .`. You can change this name if you like, however you'll need to change the image name in docker-compose.yml to match.
 * Start the container: `docker-compose up -d`
 * Initally test the build by connecting to the ispconfig control panel: `http://<localhost>:8080`
